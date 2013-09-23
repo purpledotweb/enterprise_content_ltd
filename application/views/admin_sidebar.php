@@ -1,4 +1,3 @@
-
 	<div id="sidebartop">
 		<img id="logo" src="/enterprisecontent/assets/images/logo.png">
 	</div>

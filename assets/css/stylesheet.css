@@ -1,12 +1,16 @@
-body, ul, li, ol, h1, h2, h3, h4, h5, h6, p, a, div
+body, ul, li, ol, h1, h2, h3, h4, h5, h6, p, a, div, textarea, input
 {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-	font-family: helvetica, sans;
+	font-family: 'Cousine', helvetica, sans;
+	resize: none;
 }
 
-
+html
+{
+	background-image: url('/enterprisecontent/assets/images/pagepattern.png');
+}
 
 .bold
 {
@@ -15,28 +19,28 @@ body, ul, li, ol, h1, h2, h3, h4, h5, h6, p, a, div
 
 #page_container
 {
-	height:600px;
-}
-
-#content_container
-{
-	width: 60%;
+	height: auto;
+	position: relative;
+	min-height: 500px;
+	width: 950px;
+	display: block;
+	background-image: url('/enterprisecontent/assets/images/mainback.png');
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: white;
-	color: black;
-    display: block;
 }
-
-
 
 #menu
 {
 	height: 20px;
+	min-width: 950px;
 	text-align: center;
 	padding: 15px;
 	background-color: #001226;
 	display: block;
+	float: center;
 }
 
 #menu a
@@ -44,32 +48,89 @@ body, ul, li, ol, h1, h2, h3, h4, h5, h6, p, a, div
 	color: black;
 	font-weight: bold;
 	font-size: 18px;
-		color: white;
+	color: white;
 }
 
 #menu a:hover
 {
-	text-decoration: underline;
+	color: #ff6600;
 }
 
 #menu li
 {
 	display: inline;
 	list-style: none;
-	padding: 5px;
-	margin: 5px;
+}
+
+#coolMenu,
+#coolMenu ul {
+    list-style: none;
+}
+#coolMenu {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+
+#coolMenu > li
+{
+    display: inline-block;
+    margin: 0;
+}
+
+#coolMenu li a
+{
+	display: block;
+    padding: 0 20px;
+    margin: 0;
+    text-decoration: none;
+}
+
+#coolMenu ul
+{
+    position: absolute;
+    display: none;
+	z-index: 999;
+	background-color:#001226;
+
+	padding: 10px 0 0 0;
+}
+
+#aboutlist a
+{
+	padding: 1em;
+}
+
+#coolMenu ul li a
+{
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 10px;
+    margin: 0;
+    border-bottom: 2px solid #909090;
+}
+
+#coolMenu li:hover ul
+{
+    display: block;
+}
+
+#logoutbutton
+{
+    border-left: 2px solid #f0f0f0;
 }
 
 #header
 {
 	width: 100%;
-
+	border-bottom: 2px solid #909090;
 	background-color: #001226;
 }
 
 #headerimg
 {
-	width: 930px;
+	width: 865px;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -77,72 +138,166 @@ body, ul, li, ol, h1, h2, h3, h4, h5, h6, p, a, div
 
 #header img
 {
-	width: 930px;
-	margin-left: auto;
+    margin-left: auto;
 	margin-right: auto;
 	border: 6px solid white;
 	margin-top: 20px;
+	width: 98.5%;
+	padding: 0px;
 }
 
 #sidebar
 {
-	background-size: 100%;
-	height: 100%;
-	width: 250px;
-	background-repeat: no-repeat;
 	float: left;
-	position: relative;
+	width: 230px;
+	background-color: blue;
 }
 
-#sidebar img
+
+
+#contentBackground
 {
-	height: 100%;
-	width: 250px;
+
+	width: 950px;
+}
+
+#sidebartop {
+	position: absolute;
+	top: 5%;
+	height: 35%;
+	margin-left: 40px;
+}
+
+#logo {
+
+    width: 150px;
+    height: 100%;
+    display: block;
+    margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #sidebarbottom
 {
-	background: transparent;
 	position: absolute;
-	top: 55%;
-	left: 35px;
-	text-align: center;
+	bottom: 0%;
+	height: 45%;
+	margin-left: 40px;
 }
 
 #sidebarbottom li
 {
 	list-style: none;
-	padding: 20px 0 20px 0;
+	height: 30%;
+}
+
+#sidebarbottom ul
+{
+	height: 100%;
+	margin-left: -20px;
+	text-align: center;
+	vertical-align: center;
 }
 
 .li_two
 {
-	margin-left: 15%;
+	margin-left: 10%;
 }
 
 .li_three
 {
-	margin-left: 30%;
+	margin-left: 20%;
 }
 
-#main
+#main {
+
+    width: 630px;
+    height: auto;
+    padding: 10px;
+    top: 365px;
+    margin-left: 250px;
+    display: block;
+    overflow-y: auto;
+}
+
+#main p, #main h1, #main h2, #main h3, #main h4, #main h5, #main h6{
+	font-family: helvetica;
+	line-height: 1.4em;
+}
+
+#adminMain {
+        width: 630px;
+    height: auto;
+    padding: 10px;
+    top: 365px;
+    margin-left: 250px;
+    display: block;
+    overflow-y: auto;
+
+}
+
+.mainbutton, .mainbutton button
 {
-	background-color: white;
-	width: 680px;
-	height: 100%;
-	float: right;
-	display: block;
+	margin: 10px 0 -1em 0;
+	padding: 0;
+	width: 100%;
+	height: 50px;
+	font-size: 16px;
+	font-weight: bold;
+
+}
+
+#adminMain textarea
+{
+	overflow: scroll;
+	width: 99%;
+	height: 75%;
+	margin-top: -1em;
+
+}
+
+.nicEdit-panelContain
+{
+	margin-top: 15px;
 }
 
 #footer
 {
-	border-top: 2px solid #f0f0f0;
+	background-image: url('/enterprisecontent/assets/images/footerpattern.png');
+	border-top: 2px solid #909090;
 	padding: 5px;
 	display: block;
-	height: 20px;
+	height: 40px;
 	width:100%;
 	float: left;
 }
 
+#footercontent
+{
+	padding-top: 12px;
+	width: 930px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #909090;
+	font-size: 10pt;
+}
 
+#adminlink
+{
+	float: right;
+	color: transparent;
+}
 
+#adminlink:hover
+{
+	color: black;
+}
+
+#adminheading
+{
+	text-align: center;
+	color: white;
+	padding: 1em;
+}
